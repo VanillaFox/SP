@@ -25,7 +25,7 @@
      (display "largest-coin: ")
      (display largest-coin)
      (newline)
-    (cond (((< 0 amount) (cond((< 0 KINDS-OF-COINS) (cond((< 0 largest-coin)
+    (cond ((< 0 amount) (cond((< 0 KINDS-OF-COINS) (cond((< 0 largest-coin)
         (let()(display "List of coin denominations: ") 
         (denomination-list KINDS-OF-COINS)
         (display "count-change= ") 
