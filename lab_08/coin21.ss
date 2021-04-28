@@ -1,9 +1,6 @@
 (define VARIANT 17)
 (define LAST-DIGIT-OF-GROUP-NUMBER 8)
 (define KINDS-OF-COINS 4)
-(define (MORE x y)
-    (cond((not(< x y)) (cond((not(= x y)) 1) (else 0)))(else 0))
-)
 
 (define (first-denomination kinds-of-coins)
   (cond((= kinds-of-coins 1) 2)(else
@@ -28,7 +25,7 @@
      (display "largest-coin: ")
      (display largest-coin)
      (newline)
-    (cond ((= 1 (MORE amount 0)) (cond((= 1 (MORE KINDS-OF-COINS 0)) (cond((= 1 (MORE largest-coin 0))
+    (cond (((< 0 amount) (cond((< 0 KINDS-OF-COINS) (cond((< 0 largest-coin)
         (let()(display "List of coin denominations: ") 
         (denomination-list KINDS-OF-COINS)
         (display "count-change= ") 
@@ -79,4 +76,3 @@
 (set! KINDS-OF-COINS 13)
 (display (count-change 100))
 (newline)
-(display "(c) Kruglova M.S. 2021\n")
