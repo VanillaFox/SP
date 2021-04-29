@@ -41,14 +41,13 @@
   (remainder (+ (* 100 LAST-DIGIT-OF-GROUP-NUMBER) VARIANT) 231)
 )
 
-(define (pier x y)
-  (cond((= x 0) (cond((= y 0) 1) (else 0)))(else 0))
+(define (pier? x? y?)
+  (= 0 (+ (cond(x? 1)(else 0)) (cond(y? 1)(else 0))))
 )
 
 (define(cc amount kinds-of-coins)
-
   (cond((= amount 0) 1)(else (cond(
-    (= (pier (cond((< amount 0) 1)(else 0)) (cond((= kinds-of-coins 0) 1)(else 0))) 1)
+    (pier? (< amount 0) (= kinds-of-coins 0))
     (+ (cc amount (- kinds-of-coins 1))
     (cc (- amount (first-denomination kinds-of-coins)) kinds-of-coins)))
     (else 0)
