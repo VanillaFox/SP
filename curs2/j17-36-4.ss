@@ -1,0 +1,6 @@
+(define x 33)
+(define z (* x 2))
+(define (func y)
+    (set! y (+ z y))
+    (x y)
+)

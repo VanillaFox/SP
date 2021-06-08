@@ -1,0 +1,5 @@
+(define (f x y)
+    (set! x (+ x 1))
+    (set! y (e 1 2))
+    (+ x y)
+)

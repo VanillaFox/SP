@@ -1,0 +1,6 @@
+(define (f) 
+    (x 1 2)
+    1)
+(define (z) 
+    (x))
+(define (x) 1)

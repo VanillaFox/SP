@@ -1,0 +1,10 @@
+(define (func x)
+    (let(
+        (a 33)
+        (pi 20)
+        (x 10)
+        (a 1)
+    )
+        (+ (+ pi a) x)
+    )
+)

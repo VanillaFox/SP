@@ -1,0 +1,6 @@
+(define (x? y) 
+    (= y 1)
+)
+(define (func y)
+    (cond(x? (+ 1 y))(else (- y 1)))
+)
